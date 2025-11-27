@@ -1,0 +1,28 @@
+{{define "content"}}
+<div style="max-width: 600px; margin: 0 auto;">
+    <h2 style="text-align: center; color: #333; margin-bottom: 30px;">✍️ Create New Post</h2>
+    
+    {{if .Error}}
+    <div class="error">{{.Error}}</div>
+    {{end}}
+    
+    <form method="POST" action="/post">
+        <div class="form-group">
+            <label for="title">📝 Post Title</label>
+            <input type="text" id="title" name="title" placeholder="Enter a descriptive title..." required>
+        </div>
+        
+        <div class="form-group">
+            <label for="content">💭 Content</label>
+            <textarea id="content" name="content" placeholder="Share your thoughts..." required></textarea>
+        </div>
+        
+        <div style="display: flex; gap: 15px;">
+            <button type="submit" style="flex: 1;">📤 Publish Post</button>
+            <a href="/" style="background: #6c757d; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; text-align: center; transition: background 0.3s ease;">
+                ❌ Cancel
+            </a>
+        </div>
+    </form>
+</div>
+{{end}}
