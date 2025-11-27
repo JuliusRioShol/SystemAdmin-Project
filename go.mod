@@ -1,8 +1,8 @@
-module go-docker-app
+module discussionboard
 
-go 1.25
+go 1.25.4
 
 require (
 	github.com/lib/pq v1.10.9
-	golang.org/x/crypto v0.17.0
+	golang.org/x/crypto v0.45.0
 )
